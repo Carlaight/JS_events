@@ -25,11 +25,11 @@ let navbarHeader = document.getElementById('navbarHeader');
 // console.log(navbarHeader);
 
 // 2. Define the function that will respond to the event.
-let toggleNavbar = function(){
+let navbarToggle = function(){
 navbarHeader.classList.toggle('collapse');
 };
 // 3. Add the event listener for the element and function
-hamburger.addEventListener('click', toggleNavbar);
+hamburger.addEventListener('click', navbarToggle);
 
 
 
@@ -96,3 +96,31 @@ let bootstrapDisable = function()
   }
 // 3. Add the event listener for the element and function
 navbar.addEventListener('dblclick', bootstrapDisable);
+
+
+
+//Fonctionnalité 6 :
+
+// 1. Find and store the element we want to listen to events on.
+let cards = document.getElementsByClassName("card");
+// console.log(cards);
+
+// 2. Define the function that will respond to the event.
+let cardToggle = function()
+  {
+  if (this.getElementsByClassName("card-text")[0].style.visibility == "hidden") 
+  {
+    this.getElementsByTagName("img")[0].style.width = "100%";
+    this.getElementsByClassName("card-text")[0].style.visibility = "visible";
+  }
+  else {
+    this.getElementsByTagName("img")[0].style.width = "20%";
+    this.getElementsByClassName("card-text")[0].style.visibility = "hidden";
+  }
+}
+
+// 3. Add the event listener for the element and function
+for(var i = 0; i < cards.length; i++) 
+{
+  cards[i].addEventListener('mouseenter', cardToggle);
+}
