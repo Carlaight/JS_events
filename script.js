@@ -124,3 +124,24 @@ for(var i = 0; i < cards.length; i++)
 {
   cards[i].addEventListener('mouseenter', cardToggle);
 }
+
+
+//Fonctionnalité 7 :
+
+// 1. Find and store the element we want to listen to events on.
+let buttonShuffle = document.getElementsByClassName("btn")[1];
+// console.log(cardsShuffle)
+let rowOfCards = document.getElementsByClassName("row")[1];
+
+console.log(rowOfCards)
+console.log(rowOfCards.lastElementChild.innerHTML)
+console.log(rowOfCards.lastElementChild)
+
+// 2. Define the function that will respond to the event.
+let cardsShuffle = function() 
+{
+// manque le principal ahahahah
+}
+
+// 3. Add the event listener for the element and function
+buttonShuffle.addEventListener('click', cardsShuffle);
