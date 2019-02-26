@@ -131,16 +131,16 @@ for(var i = 0; i < cards.length; i++)
 // 1. Find and store the element we want to listen to events on.
 let buttonShuffle = document.getElementsByClassName("btn")[1];
 // console.log(cardsShuffle)
-let rowOfCards = document.getElementsByClassName("row")[1];
+let lastCard = document.getElementsByClassName("row")[1];
 
-console.log(rowOfCards)
-console.log(rowOfCards.lastElementChild.innerHTML)
-console.log(rowOfCards.lastElementChild)
+console.log(lastCard)
+console.log(lastCard.lastElementChild.innerHTML)
+console.log(lastCard.lastElementChild)
 
 // 2. Define the function that will respond to the event.
 let cardsShuffle = function() 
 {
-// manque le principal ahahahah
+  lastCard.insertBefore(lastCard.lastElementChild, lastCard.firstElementChild)
 }
 
 // 3. Add the event listener for the element and function
